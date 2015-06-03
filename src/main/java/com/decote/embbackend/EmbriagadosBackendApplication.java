@@ -6,7 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("com.decote.controllers")
+@ComponentScan("com.decote.embbackend.controllers")
 @EnableAutoConfiguration
 public class EmbriagadosBackendApplication {
 

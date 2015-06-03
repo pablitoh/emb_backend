@@ -1,4 +1,4 @@
-package com.decote.dataEntity;
+package com.decote.embbackend.dataEntity;
 
 public class Greeting {
 	 private final long id;
