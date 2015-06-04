@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.decote.embbackend.model.SearchCriteria;
 import com.decote.embbackend.model.UserRule;
 import com.decote.embbackend.repository.RuleRepository;
 
@@ -20,12 +20,12 @@ public class Controller {
 	private RuleRepository repository;
 	
 	    @RequestMapping(method = RequestMethod.GET)
-	    public List<UserRule> getByCountry(@RequestBody SearchCriteria search) {
-	    	return repository.findByCountry(search.getCountry());
+	    public List<UserRule> getByCountry(@RequestParam String country) {
+	        return repository.findByCountry(country);
 	    }
 	    
 	    @RequestMapping(method = RequestMethod.POST)
-	    public UserRule insertRule(@RequestBody UserRule rule) {        
+	    public List<UserRule> insertRule(@RequestBody List<UserRule> rule) {        
 	    	repository.save(rule);
 	    	return rule;
 	    }
