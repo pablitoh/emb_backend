@@ -20,7 +20,7 @@ public class DBConfig {
             String username = "postgres";
             String password = "admin";
             String url = "jdbc:postgresql://localhost:5432/embriagados";
-            String dbProperty = System.getProperty("DATABASE_URL");
+            String dbProperty = System.getProperty("database.url");
             if(dbProperty != null) {
                 dbUri = new URI(dbProperty);
 
