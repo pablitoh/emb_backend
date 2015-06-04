@@ -9,5 +9,7 @@ import com.decote.embbackend.model.UserRule;
 
 public interface RuleRepository extends CrudRepository<UserRule,Long> {
 	
-	List<UserRule> findByCountry(String country);
+	List<UserRule> findFirst30ByCountryAllIgnoreCaseOrderByAmountAddsDesc(String country);
+	List<UserRule> findFirst30ByCountryAllIgnoreCaseOrderByIdDesc(String country);
+	
 }

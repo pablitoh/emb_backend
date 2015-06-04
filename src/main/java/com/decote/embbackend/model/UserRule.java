@@ -16,7 +16,7 @@ public class UserRule {
     private long id;
 	private String rule;
 	private String country;
-	private long amount_of_adds;
+	private long amountAdds;
 	
 
 	public long getId() {
@@ -43,12 +43,12 @@ public class UserRule {
 		this.country = country;
 	}
 
-	public long getAmount_of_adds() {
-		return amount_of_adds;
+	public long getAmountAdds() {
+		return amountAdds;
 	}
 
-	public void setAmount_of_adds(long amount_of_adds) {
-		this.amount_of_adds = amount_of_adds;
+	public void setAmountAdds(long amount_of_adds) {
+		this.amountAdds = amount_of_adds;
 	}
 
 	
@@ -63,7 +63,7 @@ public class UserRule {
 	@Override
 	public String toString() {
 		return "UserRule [id=" + id + ", rule=" + rule + ", country=" + country
-				+ ", amount_of_adds=" + amount_of_adds + "]";
+				+ ", amount_of_adds=" + amountAdds + "]";
 	}
 
 
