@@ -22,10 +22,8 @@ public class DBConfig {
             String url = null;
             url = "jdbc:postgresql://localhost:5432/embriagados";
             String dbProperty = System.getenv("DATABASE_URL");
-            System.out.println("Proper:"+dbProperty);
             if(dbProperty != null) {
                 dbUri = new URI(dbProperty);
-
                 username = dbUri.getUserInfo().split(":")[0];
                 password = dbUri.getUserInfo().split(":")[1];
                 url = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
