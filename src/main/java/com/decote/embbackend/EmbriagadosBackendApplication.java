@@ -1,14 +1,21 @@
 package com.decote.embbackend;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+
+import com.decote.embbackend.model.Rules;
+import com.decote.embbackend.repository.RuleRepository;
+
+
 
 @SpringBootApplication
 public class EmbriagadosBackendApplication {
 
+	@Autowired
+	RuleRepository repository;
+	
     public static void main(String[] args) {
     	String webPort = System.getenv("PORT");
         if (webPort == null || webPort.isEmpty()) {
@@ -17,4 +24,5 @@ public class EmbriagadosBackendApplication {
         System.setProperty("server.port", webPort);
         SpringApplication.run(EmbriagadosBackendApplication.class, args);
     }
+    
 }
