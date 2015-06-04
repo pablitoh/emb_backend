@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.decote.embbackend.dataEntity.Greeting;
-import com.decote.embbackend.model.Rules;
+import com.decote.embbackend.model.UserRule;
 import com.decote.embbackend.repository.RuleRepository;
 
 @RestController
@@ -29,7 +29,7 @@ public class Controller {
 	    @RequestMapping("/put")
 	    public String insertRule(@RequestParam(value="name", defaultValue="World") String name) {
 	        
-	    	Rules rule = new Rules(name,"Argentina");
+	    	UserRule rule = new UserRule(name,"Argentina");
 	    	repository.save(rule);
 	    	return rule.toString();
 	    }

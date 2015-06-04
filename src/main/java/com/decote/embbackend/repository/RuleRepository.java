@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.decote.embbackend.model.Rules;
+import com.decote.embbackend.model.UserRule;
 
 
-public interface RuleRepository extends CrudRepository<Rules,Long> {
+public interface RuleRepository extends CrudRepository<UserRule,Long> {
 	
-	List<Rules> findByCountry(String country);
+	List<UserRule> findByCountry(String country);
 }
