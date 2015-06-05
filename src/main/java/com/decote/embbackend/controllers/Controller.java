@@ -41,7 +41,7 @@ public class Controller {
 	     * @return
 	     */
 	    @RequestMapping(method = RequestMethod.POST)
-	    public List<UserRule> insertRule(@RequestBody List<UserRule> rule) {        
+	    public UserRule insertRule(@RequestBody UserRule rule) {        
 	    	repository.save(rule);
 	    	return rule;
 	    }
